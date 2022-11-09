@@ -19,7 +19,7 @@ public class Trabajador {
 	@Column(name = "apellido")
 	private String apellido;
 	@Column(name = "puesto_trabajo")
-	private String puesto_trabajo;
+	private String puesto;
 	@Column(name = "salario")
 	private double salario;
 	
@@ -38,7 +38,7 @@ public class Trabajador {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.puesto_trabajo = puesto_trabajo;
+		this.puesto = puesto_trabajo;
 		this.salario = salario;
 	}
 
@@ -87,15 +87,15 @@ public class Trabajador {
 	/**
 	 * @return puesto_trabajo
 	 */
-	public String getPuesto_trabajo() {
-		return puesto_trabajo;
+	public String getPuesto() {
+		return puesto;
 	}
 
 	/**
 	 * @param puesto_trabajo
 	 */
 	public void setPuesto_trabajo(String puesto_trabajo) {
-		this.puesto_trabajo = puesto_trabajo;
+		this.puesto = puesto_trabajo;
 	}
 
 	/**

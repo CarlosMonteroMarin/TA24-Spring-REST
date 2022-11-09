@@ -54,7 +54,7 @@ public class TrabajadorController {
 		
 		trabajador_seleccionado.setNombre(trabajador.getNombre());
 		trabajador_seleccionado.setApellido(trabajador.getApellido());
-		trabajador_seleccionado.setPuesto_trabajo(trabajador.getPuesto_trabajo());
+		trabajador_seleccionado.setPuesto_trabajo(trabajador.getPuesto());
 		trabajador_seleccionado.setSalario(trabajador.getSalario());
 		
 		trabajador_actualizado = trabajadorServiceImpl.actualizarTrabajador(trabajador_seleccionado);
