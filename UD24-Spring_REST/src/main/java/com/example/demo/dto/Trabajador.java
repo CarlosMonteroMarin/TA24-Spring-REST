@@ -23,6 +23,8 @@ public class Trabajador {
 	@Column(name = "salario")
 	private double salario;
 	
+	private String trabajador;
+	
 	
 	public Trabajador() {
 	}
@@ -34,12 +36,12 @@ public class Trabajador {
 	 * @param puesto_trabajo
 	 * @param salario
 	 */
-	public Trabajador(Long id, String nombre, String apellido, String puesto_trabajo, double salario) {
+	public Trabajador(Long id, String nombre, String apellido, String puesto, double salario) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.puesto = puesto_trabajo;
-		this.salario = salario;
+		this.puesto=puesto;
+		this.salario=salario;
 	}
 
 	/**
@@ -94,15 +96,18 @@ public class Trabajador {
 	/**
 	 * @param puesto_trabajo
 	 */
-	public void setPuesto_trabajo(String puesto_trabajo) {
+	public void setPuesto(String puesto_trabajo) {
 		this.puesto = puesto_trabajo;
 	}
 
 	/**
 	 * @return salario
 	 */
+	
 	public double getSalario() {
-		return salario;
+		return com.example.demo.controller.Trabajador.definirSalario(puesto);
+		
+
 	}
 
 	/**
@@ -111,6 +116,13 @@ public class Trabajador {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+
+	@Override
+	public String toString() {
+		return "Trabajador [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", puesto=" + puesto
+				+ ", salario=" + salario + ", trabajador=" + trabajador + "]";
+	}
+	
 	
 	
 }
